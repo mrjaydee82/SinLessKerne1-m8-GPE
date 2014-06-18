@@ -1087,7 +1087,7 @@ out_put_dentry:
 
 SYSCALL_DEFINE3(shmat, int, shmid, char __user *, shmaddr, int, shmflg)
 {
-	unsigned long ret;
+	unsigned long ret = 0;
 	long err;
 
 	err = do_shmat(shmid, shmaddr, shmflg, &ret);
@@ -1235,3 +1235,4 @@ static int sysvipc_shm_proc_show(struct seq_file *s, void *it)
 			  swp * PAGE_SIZE);
 }
 #endif
+

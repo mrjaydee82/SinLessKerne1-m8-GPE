@@ -1175,7 +1175,7 @@ EXPORT_SYMBOL(sock_create_kern);
 SYSCALL_DEFINE3(socket, int, family, int, type, int, protocol)
 {
 	int retval;
-	struct socket *sock;
+	struct socket *sock = NULL;
 	int flags;
 
 	
@@ -1213,7 +1213,7 @@ out_release:
 SYSCALL_DEFINE4(socketpair, int, family, int, type, int, protocol,
 		int __user *, usockvec)
 {
-	struct socket *sock1, *sock2;
+	struct socket *sock1 = NULL, *sock2;
 	int fd1, fd2, err;
 	struct file *newfile1, *newfile2;
 	int flags;
@@ -3040,3 +3040,4 @@ int kernel_sock_shutdown(struct socket *sock, enum sock_shutdown_cmd how)
 	return sock->ops->shutdown(sock, how);
 }
 EXPORT_SYMBOL(kernel_sock_shutdown);
+

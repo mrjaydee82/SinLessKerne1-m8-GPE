@@ -389,7 +389,7 @@ static int __devinit smsc_hub_probe(struct platform_device *pdev)
 	struct device_node *node = pdev->dev.of_node;
 	struct i2c_adapter *i2c_adap;
 	struct i2c_board_info i2c_info;
-	struct of_dev_auxdata *hsic_host_auxdata;
+	struct of_dev_auxdata *hsic_host_auxdata = NULL;
 
 	if (pdev->dev.of_node) {
 		dev_dbg(&pdev->dev, "device tree enabled\n");
@@ -620,3 +620,4 @@ module_exit(smsc_hub_exit);
 
 MODULE_LICENSE("GPL v2");
 MODULE_DESCRIPTION("SMSC HSIC HUB driver");
+

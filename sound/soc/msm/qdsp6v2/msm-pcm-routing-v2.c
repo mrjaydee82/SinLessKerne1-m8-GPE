@@ -1321,9 +1321,9 @@ static int msm_routing_set_srs_trumedia_control_(struct snd_kcontrol *kcontrol,
 					__func__, i, i>>1);
 				break;
 			}
-			pr_debug("SRS %s: param_index %d index %d val %d",
-				__func__, index, i,
-				msm_srs_trumedia_params[index].raw_params[i]);
+			//pr_debug("SRS %s: param_index %d index %d val %d",
+			//	__func__, index, i,
+			//	msm_srs_trumedia_params[index].raw_params[i]);
 		}
 	}
 	return 0;
@@ -4468,3 +4468,4 @@ module_exit(msm_soc_routing_platform_exit);
 
 MODULE_DESCRIPTION("MSM routing platform driver");
 MODULE_LICENSE("GPL v2");
+

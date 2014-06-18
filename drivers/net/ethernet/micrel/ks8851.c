@@ -294,7 +294,7 @@ static void ks8851_rdreg(struct ks8851_net *ks, unsigned op,
 */
 static unsigned ks8851_rdreg8(struct ks8851_net *ks, unsigned reg)
 {
-	u8 rxb[1];
+	u8 rxb[1] = {0};
 
 	ks8851_rdreg(ks, MK_OP(1 << (reg & 3), reg), rxb, 1);
 	return rxb[0];
@@ -1687,3 +1687,4 @@ MODULE_LICENSE("GPL");
 module_param_named(message, msg_enable, int, 0);
 MODULE_PARM_DESC(message, "Message verbosity level (0=none, 31=all)");
 MODULE_ALIAS("spi:ks8851");
+

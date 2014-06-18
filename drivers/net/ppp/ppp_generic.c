@@ -741,7 +741,7 @@ static long ppp_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 #ifdef CONFIG_PPP_FILTER
 	case PPPIOCSPASS:
 	{
-		struct sock_filter *code;
+		struct sock_filter *code = NULL;
 		err = get_filter(argp, &code);
 		if (err >= 0) {
 			ppp_lock(ppp);
@@ -755,7 +755,7 @@ static long ppp_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 	}
 	case PPPIOCSACTIVE:
 	{
-		struct sock_filter *code;
+		struct sock_filter *code = NULL;
 		err = get_filter(argp, &code);
 		if (err >= 0) {
 			ppp_lock(ppp);
@@ -2981,3 +2981,4 @@ EXPORT_SYMBOL(ppp_unregister_compressor);
 MODULE_LICENSE("GPL");
 MODULE_ALIAS_CHARDEV(PPP_MAJOR, 0);
 MODULE_ALIAS("devname:ppp");
+
