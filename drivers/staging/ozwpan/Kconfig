@@ -7,3 +7,4 @@ config USB_WPAN_HCD
 
 	  To compile this driver a module, choose M here: the module
 	  will be called "ozwpan".
+
