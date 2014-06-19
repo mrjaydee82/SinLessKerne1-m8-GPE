@@ -5,6 +5,7 @@ piggy.gzip
 piggy.lzo
 piggy.lzma
 piggy.xzkern
+piggy.lz4
 vmlinux
 vmlinux.lds
 
@@ -16,3 +17,4 @@ fdt_rw.c
 fdt_wip.c
 libfdt.h
 libfdt_internal.h
+
