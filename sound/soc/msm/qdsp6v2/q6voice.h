@@ -357,6 +357,9 @@ struct vss_imemory_cmd_unmap_t {
 
 #define VSS_IRECORD_PORT_ID_DEFAULT			0x0000FFFF
 
+/* Port explicitly identifying TX and RX streams */
+#define VSS_IRECORD_PORT_ID_TX_RX			0x00008003
+
 #define VSS_IRECORD_TAP_POINT_NONE			0x00010F78
 
 #define VSS_IRECORD_TAP_POINT_STREAM_END		0x00010F79
@@ -1033,3 +1036,4 @@ int voc_start_record(uint32_t port_id, uint32_t set, uint32_t session_id);
 int voice_get_idx_for_session(u32 session_id);
 int voc_set_ext_ec_ref(uint16_t port_id, bool state);
 #endif
+
