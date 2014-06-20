@@ -845,3 +845,9 @@ CONFIG_DIRTY_SYSTEM_DETECTOR=y
 # Library routines
 #
 CONFIG_LZ4_COMPRESS=y
+
+#
+# Team-Nocturnal
+#
+CONFIG_SOUND_CONTROL_HAX_3_GPL=y
+
